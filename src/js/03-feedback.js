@@ -7,7 +7,7 @@ console.log(formRef.message.value);
 
 const STORAGE_KEY = 'feedback-form-state';
 
-let formData = {};
+let formData = {"email":"","message":""};
 
 formRef.addEventListener('input', throttle(onFormInput, 500) );
 formRef.addEventListener('submit', onFormSubmit)
