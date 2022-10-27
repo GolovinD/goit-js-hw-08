@@ -15,12 +15,7 @@ formRef.addEventListener('submit', onFormSubmit)
 populateTextAria();
 
 function onFormInput(evt) {
-    const saveMassage = JSON.parse(localStorage.getItem(STORAGE_KEY));
-    if (saveMassage) {
-        formData.email  = saveMassage.email;
-        formData.message = saveMassage.message;
-     }
-
+    
     formData[evt.target.name] = evt.target.value;
     const message = JSON.stringify(formData);
     console.log(message);
